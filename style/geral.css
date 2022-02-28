@@ -20,6 +20,7 @@ html {
 body {
     font-size: 1.6rem;
     min-height: 100vh;
+    line-height: 1.5;
 }
 
 :root {
@@ -40,4 +41,70 @@ body {
     /* FONT */
     --font-text-one: 'Barlow', sans-serif;
     --font-text-two: 'Fraunces', serif;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+
+.header {
+    padding: 3rem;
+    background-color: #3EBFFF;
+}
+
+.container {
+    max-width: 122rem;
+    margin: 0 auto;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav_list li {
+    margin-right: 3rem;
+}
+
+.nav_list a {
+    font-size: 1.4rem;
+    font-family: var(--font-text-one);
+    font-weight: 400;
+    color: var(--White);
+}
+
+.nav_list a:hover {
+    color: black;
+    transition: .4s;
+}
+
+a.contact {
+    display: block;
+    text-align: center;
+    background-color: var(--White);
+    padding: 1rem;
+    color: black;
+    width: 14rem;
+    border-radius: 5rem;
+    font-family: var(--font-text-two);
+    font-size: 1.8rem;
+}
+
+a.contact:hover {
+    background-color: #65CCFF;
+    color: var(--White);
+    transition: .4s;
 }
