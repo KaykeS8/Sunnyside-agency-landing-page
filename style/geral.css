@@ -154,8 +154,34 @@ a.contact:hover {
         display: none;
     }
 
+    nav.show {
+        display: flex;
+        position: absolute;
+        background-color: rebeccapurple;
+        top: calc(100vh - 90%);
+        z-index: 1;
+        padding: 1rem;
+        width: 89%;
+    }
+
+    nav.show::before {
+        content: "";
+        position: absolute;
+        top: -1rem;
+        right: .0;
+        border-bottom:3rem solid rebeccapurple;
+        border-left: 3rem solid transparent;
+    }
+
+    .nav_list {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
     [data-menu="menu-open"] {
         display: block;
+        cursor: pointer;
     }
 
     .burger::before {
