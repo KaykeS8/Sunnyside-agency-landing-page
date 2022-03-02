@@ -160,7 +160,7 @@ a.contact:hover {
     padding: 2rem;
 }
 
-.intro_card h2{
+.intro_card h2 {
     font-size: 3rem;
     font-family: var(--font-text-two);
     margin-bottom: 1rem;
@@ -170,6 +170,129 @@ a.contact:hover {
     color: #818498;
     font-family: var(--font-text-one);
     margin-bottom: 2rem;
+}
+
+.intro_card a {
+    color: #000000;
+    font-family: var(--font-text-two);
+    position: relative;
+}
+
+a.link-egg::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 0.5rem;
+    border-radius: 3rem;
+    background-color: var(--Yellow);
+    opacity: 0.3;
+    z-index: -1;
+}
+
+a.link-egg:hover::after {
+    opacity: 1;
+    transition: .4s;
+}
+
+a.link-cup::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0.5rem;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.3;
+    border-radius: 3rem;
+    background-color: var(--Soft-red);
+}
+
+a.link-cup:hover::after {
+    opacity: 1;
+    transition: .4s;
+}
+
+
+/* PRODUCTS */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.products-one, .products-two {
+    position: relative;
+}
+
+.products-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% - 40%);
+    text-align: center;
+    width: 100%;
+    max-width: 50rem;
+    left: calc(100% - 85%);
+}
+
+.products-content h2 {
+    color: var(--Dark-desaturated-cyan-graphic-design-text);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-text-two);
+}
+
+.products-content p {
+    color: var(--Dark-desaturated-cyan-graphic-design-text);
+    font-family: var(--font-text-one);
+}
+
+/* CLIENTS */
+
+.clients {
+    padding: 3rem;
+}
+
+.clients h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-family: var(--font-text-two);
+    color: var(--Grayish-blue);
+    text-transform: uppercase;
+    margin: 8rem 0;
+    letter-spacing: .3rem;
+}
+
+.clients-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.clients-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    max-width: 35rem;
+}
+
+.clients-content img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 9rem;
+    width: 9rem;
+    margin-bottom: 3rem;
+}
+
+.client-description {
+    font-family: var(--font-text-one);
+    color: hsl(210, 9%, 39%);
+    text-align: center;
 }
 
 @media screen and (max-width:700px) {
@@ -187,7 +310,7 @@ a.contact:hover {
         z-index: 1;
         padding: 1rem;
         width: 87%;
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
 
     nav.show::before {
@@ -195,7 +318,7 @@ a.contact:hover {
         position: absolute;
         top: -1rem;
         right: 0;
-        border-bottom:3rem solid var(--White);
+        border-bottom: 3rem solid var(--White);
         border-left: 3rem solid transparent;
     }
 
@@ -205,7 +328,7 @@ a.contact:hover {
         margin: 0 auto;
     }
 
-    .nav_list li > a {
+    .nav_list li>a {
         color: var(--Grayish-blue);
     }
 
@@ -254,4 +377,3 @@ a.contact:hover {
     }
 
 }
-
