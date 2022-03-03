@@ -64,6 +64,7 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 5rem 3rem 40rem 3rem;
+    height: 100vh;
 }
 
 .container {
@@ -250,6 +251,10 @@ a.link-cup:hover::after {
     font-family: var(--font-text-one);
 }
 
+.products-image-mobile {
+    display: none;
+}
+
 /* CLIENTS */
 
 .clients {
@@ -270,6 +275,7 @@ a.link-cup:hover::after {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .clients-content {
@@ -295,7 +301,90 @@ a.link-cup:hover::after {
     text-align: center;
 }
 
-@media screen and (max-width:700px) {
+.client-name {
+    font-family: var(--font-text-two);
+    font-size: 2.1rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.client-profession {
+    font-family: var(--font-text-one);
+    color: var(--Grayish-blue);
+}
+
+
+/* IMAGES */
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    margin-top: 8rem;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: hsl(167, 47%, 73%);
+    height: 70vh;
+    text-align: center;
+}
+
+.footer-logo {
+    padding-top: 6rem;
+}
+
+.footer-logo img {
+    margin: 0 auto;
+    width: 20rem;
+}
+
+.footer-links {
+    margin-top: 6rem;
+}
+
+.footer-links a {
+    margin-right: 3rem;
+    font-size: 2.2rem;
+    font-family: var(--font-text-one);
+    cursor: pointer;
+    color: #5CA192;
+}
+
+.footer-links a:hover {
+    color: var(--White);
+    transition: ease-in .4s;
+}
+
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6rem 0;
+}
+
+.footer-icons img {
+    margin-right: 3rem;
+    cursor: pointer;
+}
+
+.attribution {
+    padding-top: 6rem;
+    font-size: 1.4rem;
+    color: var(--Dark-desaturated-cyan-graphic-design-text);
+    font-family: var(--font-text-one);
+}
+
+
+.attribution a {
+    text-decoration: underline;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+@media screen and (max-width:600px) {
 
     /* MENU MOBILE */
     .nav {
